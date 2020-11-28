@@ -1,6 +1,7 @@
 import constants.enums.Notices;
 import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.*;
+import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -19,9 +20,9 @@ public class RegistrationWithIncorrectEmailTest {
 
     @Test
     public void registrationWithIncorrectEmailTest() {
-        user.openRegistrationPage()
-                .enterEmailAndPassword("badEmail", "password")
-                .clickRegistrationButton()
-                .shouldSeeNotices(Collections.singletonList(Notices.BAD_EMAIL.getTitle()));
+        user.open_registration_page()
+                .enter_email_and_password("badEmail", "password")
+                .click_registration_button()
+                .should_see_notices(Collections.singletonList(Notices.SHORT_PASSWORD.getTitle()));
     }
 }
