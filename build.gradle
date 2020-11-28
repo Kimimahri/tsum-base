@@ -1,4 +1,4 @@
-defaultTasks 'clean','test','aggregate'
+defaultTasks 'clean', 'test', 'aggregate'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -30,13 +30,14 @@ ext {
 
 dependencies {
     compile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-junit:${serenityCoreVersion}"
+            "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion"
 
     testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion",
-                       "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion"
 
     testRuntimeOnly "org.junit.vintage:junit-vintage-engine:$junitVersion",
-                    "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
 test {
