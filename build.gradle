@@ -26,16 +26,11 @@ buildscript {
 ext {
     serenityCoreVersion = '2.3.8'
     junitVersion = '5.7.0'
-    assertJVersion = '3.18.1'
-    logbackVersion = '1.2.3'
 }
 
 dependencies {
-    compile "ch.qos.logback:logback-classic:${logbackVersion}"
-
-    testCompile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+    compile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-junit:${serenityCoreVersion}"
 
     testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion",
                        "org.junit.jupiter:junit-jupiter-api:$junitVersion"
