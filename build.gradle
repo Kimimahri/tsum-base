@@ -29,9 +29,8 @@ ext {
 }
 
 dependencies {
-    compile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit:${serenityCoreVersion}"
 
     testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion"
@@ -41,7 +40,7 @@ dependencies {
 }
 
 test {
-    maxParallelForks=2
+    maxParallelForks = 2
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
     useJUnitPlatform {
