@@ -26,6 +26,7 @@ buildscript {
 ext {
     serenityCoreVersion = '2.3.8'
     junitVersion = '5.7.0'
+    slf4jVersion = '1.7.30'
 }
 
 dependencies {
@@ -36,7 +37,8 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-api:$junitVersion"
 
     testRuntimeOnly "org.junit.vintage:junit-vintage-engine:$junitVersion",
-            "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
+            "org.slf4j:slf4j-simple:${slf4jVersion}"
 }
 
 test {
