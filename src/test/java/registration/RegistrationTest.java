@@ -4,6 +4,7 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Title;
+import net.thucydides.core.annotations.WithTag;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +29,7 @@ public class RegistrationTest {
     private List<String> short_password = Collections.singletonList(Notices.SHORT_PASSWORD.getTitle());
 
     @Test
+    @WithTag("negative")
     @Title("Регистрация с некорректным email")
     public void registrationWithIncorrectEmailTest() {
         user.open_registration_page()
@@ -37,6 +39,7 @@ public class RegistrationTest {
     }
 
     @Test
+    @WithTag("negative")
     @Title("Регистрация с паролем менее 8 символов")
     public void registrationWithShortPasswordTest() {
         user.open_registration_page()
