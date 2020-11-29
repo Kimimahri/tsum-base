@@ -1,4 +1,4 @@
-package constants.enums;
+package utility.enums;
 
 // Список уведомлений
 public enum Notices {

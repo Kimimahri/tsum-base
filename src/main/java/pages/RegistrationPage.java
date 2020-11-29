@@ -3,6 +3,7 @@ package pages;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.At;
 import net.thucydides.core.annotations.DefaultUrl;
+import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 
@@ -11,16 +12,16 @@ import java.util.List;
 
 @DefaultUrl("http://localhost:9000/registration")
 @At("#HOST/registration")
-public class RegistrationPage extends BasePage {
+public class RegistrationPage extends PageObject {
     private String noticesCssLocator = "notice span.ng-star-inserted";
 
-    @FindBy(css = "input[formcontrolname='email'].ui-input")
+    @FindBy(css = ".ui-input[formcontrolname='email']")
     private WebElementFacade emailInput;
 
     @FindBy(css = "input[formcontrolname='password']")
     private WebElementFacade passwordInput;
 
-    @FindBy(css = "button[type='submit'].ui-button")
+    @FindBy(css = ".ui-button[type='submit']")
     private WebElementFacade registrationButton;
 
     /**
@@ -50,7 +51,7 @@ public class RegistrationPage extends BasePage {
      *
      * @return RegistrationPage
      */
-    public RegistrationPage clickTheRegistrationButton() {
+    public RegistrationPage clickRegistrationButton() {
         registrationButton.waitUntilEnabled().click();
         return this;
     }
