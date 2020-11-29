@@ -16,10 +16,12 @@ public class RegistrationTest {
 
     @Managed
     WebDriver driver;
-    private List<String> bad_email = Collections.singletonList(Notices.INCORRECT_EMAIL.getTitle());
-    private List<String> short_password = Collections.singletonList(Notices.SHORT_PASSWORD.getTitle());
+
     @Steps
     private UserSteps user;
+
+    private List<String> bad_email = Collections.singletonList(Notices.INCORRECT_EMAIL.getTitle());
+    private List<String> short_password = Collections.singletonList(Notices.SHORT_PASSWORD.getTitle());
 
     @Test
     @Title("Регистрация с некорректным email")

@@ -1,5 +1,6 @@
 package constants.enums;
 
+// Список уведомлений
 public enum Notices {
     INCORRECT_EMAIL("Указан некорректный email"),
     SHORT_PASSWORD("Пароль должен быть не менее 8 символов длиной");
