@@ -1,6 +1,7 @@
 package pages;
 
 import net.serenitybdd.core.pages.WebElementFacade;
+import net.thucydides.core.annotations.At;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 
-@DefaultUrl("https://www.tsum.ru/registration")
+@DefaultUrl("http://localhost:9000/registration")
+@At("#HOST/registration")
 public class RegistrationPage extends BasePage {
     private String noticesCssLocator = "notice span.ng-star-inserted";
 
