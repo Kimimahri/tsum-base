@@ -38,7 +38,7 @@ public class LoginPage extends PageObject {
     /**
      * Метод ввода пароля
      *
-     * @param password - email
+     * @param password - пароль
      * @return LoginPage
      */
     public LoginPage inputPassword(String password) {
@@ -69,7 +69,7 @@ public class LoginPage extends PageObject {
     /**
      * Метод получения типа введенного пароля
      *
-     * @return пароль
+     * @return тип введенного пароля
      */
     public String getPasswordType() {
         return passwordInput.getAttribute("type");
